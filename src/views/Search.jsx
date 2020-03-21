@@ -6,9 +6,9 @@ import ArticleCard from '../components/ArticleCard'
 
 function Search() {
 
-  const [ articles, setArticles ] = useState([])
+  const [articles, setArticles] = useState([])
 
-  useEffect( () => {
+  useEffect(() => {
     async function getArticles() {
       const payload = await api.getArticles()
 
@@ -18,11 +18,11 @@ function Search() {
     }
 
     getArticles()
-  }, articles )
+  }, articles)
 
   return (
     <ArticleCard
-      list= {articles}
+      list={articles}
     />
   )
 
