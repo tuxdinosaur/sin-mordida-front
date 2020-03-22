@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import api from '../lib/api'
 
-import ArticleCard from '../components/ArticleCard'
+import ArticleList from '../components/ArticleList'
 
 function Search() {
 
@@ -21,7 +21,7 @@ function Search() {
   }, articles)
 
   return (
-    <ArticleCard
+    <ArticleList
       list={articles}
     />
   )
