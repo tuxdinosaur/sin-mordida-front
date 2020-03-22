@@ -7,7 +7,7 @@ import {
 // import './App.css';
 import Home from './views/Home'
 import Search from './views/Search'
-import FullArticle from './views/Article'
+import Article from './views/Article'
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           /> */}
           <Route
             path='/articles/:articleId'
-            component={FullArticle}
+            component={Article}
             exact
           />
         </Switch>

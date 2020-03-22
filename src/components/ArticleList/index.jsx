@@ -8,9 +8,8 @@ function ArticleList(props) {
   return (
     <div className={styles.container}>
       {
-        props.list.map((article, index) => (
+        props.list.map((article) => (
           <Link
-            key={article.id || `articles-${article.articleId}`}
             to={`/articles/${article.articleId}`}
           >
             <ArticleCard
