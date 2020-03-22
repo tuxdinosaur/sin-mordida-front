@@ -18,7 +18,7 @@ function Search() {
     }
 
     getArticles()
-  }, articles)
+  }, [articles])
 
   return (
     <ArticleList

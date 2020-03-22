@@ -6,14 +6,14 @@ function PenaltyPreview(props) {
     return (
       <div className={styles.corralon}>
         <div className={styles.circleCorralon} />
-        <span className={styles.textCorralon}>Amerita corralón</span>
+        <span className={styles.textCorralon}>Corralón: Sí</span>
       </div>
     )
   } else if (!props.value && props.type === 'isPound') {
     return (
       <div className={styles.corralon}>
         <div className={styles.circleCorralon} />
-        <span className={styles.textCorralon}>No amerita corralón</span>
+        <span className={styles.textCorralon}>Corralón: No</span>
       </div>
     )
   }
@@ -22,14 +22,14 @@ function PenaltyPreview(props) {
     return (
       <div className={styles.corralon}>
         <div className={styles.circleCorralon} />
-        <span className={styles.textCorralon}>Amerita multa</span>
+        <span className={styles.textCorralon}>Multa: Sí</span>
       </div>
     )
   } else if (!props.value && props.type === 'umas') {
     return (
       <div className={styles.corralon}>
         <div className={styles.circleCorralon} />
-        <span className={styles.textCorralon}>No amerita multa</span>
+        <span className={styles.textCorralon}>Multa: No</span>
       </div>
     )
   }
