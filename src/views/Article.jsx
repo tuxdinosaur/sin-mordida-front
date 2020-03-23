@@ -3,33 +3,39 @@ import React, { useState, useEffect } from 'react'
 import api from '../lib/api'
 
 function Article(props) {
-  const [article, setArticle] = useState({})
-  const id = props.match.params.articleId
+  // const [article, setArticle] = useState({})
+  // const id = props.match.params.articleId
+  //const [articleId, setArticleId] = useState('')
+  const [abstract, setAbstract] = useState('')
+  const [fractions, setFractions] = useState('')
 
-  console.log(id)
+  const { articleId } = props.match.params
+
+
+  // console.log(id)
 
   useEffect(() => {
     async function getArticle() {
-      const payload = await api.getArticle(id)
-
+      const payload = await api.getArticle(articleId)
       console.log(payload.data.article[0])
-      if (article === {}) setArticle(payload.data.article[0])
+      //setArticleId(payload.data.article.articleId)
+      setAbstract(payload.data.article[0].abstract)
+      setFractions(payload.data.article[0].fractions)
 
     }
-
     getArticle()
-  }, [article])
+  }, [
+    articleId
 
-  const list = article
-  console.log('Articulo', list)
+  ])
 
   return (
     <div>
       <h5>
-        articulo
+        Artículo {articleId}
       </h5>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempora incidunt id quod a corrupti quisquam odio ad aspernatur, velit, facilis sapiente rem! Dignissimos nesciunt perspiciatis reiciendis voluptate similique odit.</p>
-
+      <p>{abstract}</p>
+      <h5>{fractions}</h5>
     </div>
   )
 
