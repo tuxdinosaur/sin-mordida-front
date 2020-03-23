@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+
+import api from '../lib/api'
 
 function Article(props) {
-  console.log(props.match.params.articleId)
+  const [article, setArticle] = useState({})
+  const id = props.match.params.articleId
+
+  console.log(id)
+
+  useEffect(() => {
+    async function getArticle() {
+      const payload = await api.getArticle(id)
+
+      console.log(payload.data.article[0])
+      if (article === {}) setArticle(payload.data.article[0])
+
+    }
+
+    getArticle()
+  }, [article])
+
+  const list = article
+  console.log('Articulo', list)
 
   return (
     <div>
