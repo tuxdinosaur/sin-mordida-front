@@ -1,6 +1,8 @@
 
 import React, { useEffect, useState } from 'react'
 
+import Items from '../Items'
+
 import api from '../../lib/api'
 
 function Fraction(props) {
@@ -30,6 +32,9 @@ function Fraction(props) {
       <h5>{fractionNumber}</h5>
 
       <p>{fractionText}</p>
+      <Items
+        items={items}
+      />
     </div>
   )
 
