@@ -70,9 +70,40 @@ async function getArticle(articleId) {
   }
 }
 
+async function getFraction(fractionId) {
+
+  const emptyResponse = { data: { fraction: {} } }
+
+  try {
+
+    const response = await window.fetch(`${API_URL}/fractions/${fractionId}`)
+
+    const payload = await response.json()
+
+    console.log('api', payload)
+
+    if (!response.ok) {
+      if (response.status >= 500) window.alert("Error al conectarse al servidor")
+
+
+      return emptyResponse
+    }
+
+    return payload
+
+  } catch (error) {
+
+    window.alert("Ocurrió un error :(")
+
+    return emptyResponse
+
+  }
+}
+
 const api = {
   getArticles,
-  getArticle
+  getArticle,
+  getFraction
 }
 
 export default api
