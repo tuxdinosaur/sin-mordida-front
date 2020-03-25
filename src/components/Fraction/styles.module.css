@@ -1,0 +1,57 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #425261;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.collapsible {
+  background-color: #425261;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active {
+  border-radius: 10px 10px 0 0;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #39424b;
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 15px 15px;
+  /* max-height: 0; */
+  /* overflow: hidden; */
+  /* transition: max-height 0.2s ease-out; */
+  background-color: #f1f1f1;
+  /* margin-bottom: 10px; */
+  border-radius: 0 0 10px 10px;
+}

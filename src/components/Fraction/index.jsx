@@ -5,6 +5,8 @@ import Items from '../Items'
 
 import api from '../../lib/api'
 
+import styles from './styles.module.css'
+
 function Fraction(props) {
 
   const [items, setItems] = useState([])
@@ -28,13 +30,15 @@ function Fraction(props) {
   }, [fractionId])
 
   return (
-    <div>
-      <h5>{fractionNumber}</h5>
+    <div className={styles.container}>
+      <button id="collapsible" className={styles.collapsible}>{fractionNumber}</button>
 
-      <p>{fractionText}</p>
-      <Items
-        items={items}
-      />
+      <div className={styles.content}>
+        <p>{fractionText}</p>
+        <Items
+          items={items}
+        />
+      </div>
     </div>
   )
 

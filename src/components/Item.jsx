@@ -24,7 +24,7 @@ function Item(props) {
   }, [itemId])
 
   return (
-    <p><span>{itemLetter}.</span>{itemText}</p>
+    <p><span>{itemLetter}. </span>{itemText}</p>
   )
 
 }
