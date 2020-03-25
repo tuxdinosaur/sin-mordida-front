@@ -10,7 +10,7 @@ function ArticleList(props) {
       {
         props.list.map((article) => (
           <Link
-            key={article.articleId}
+            key={`article ${article.articleId}`}
             to={`/articles/${article.articleId}`}
           >
             <ArticleCard

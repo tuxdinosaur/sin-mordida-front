@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Fractions from '../components/Fractions'
+import Table from '../components/Table'
 
 import api from '../lib/api'
 
@@ -19,7 +20,7 @@ function Article(props) {
   useEffect(() => {
     async function getArticle() {
       const payload = await api.getArticle(articleId)
-      console.log(payload.data.article[0])
+
       setAbstract(payload.data.article[0].abstract)
       setFractions(payload.data.article[0].fractions)
       setTags(payload.data.article[0].tags)
@@ -42,6 +43,9 @@ function Article(props) {
       <p>{abstract}</p>
       <Fractions
         fractions={fractions}
+      />
+      <Table
+        tableId={table}
       />
     </div>
   )

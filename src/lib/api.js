@@ -14,7 +14,6 @@ async function getArticles() {
     if (!response.ok) {
       if (response.status >= 500) window.alert("Error al conectarse al servidor")
 
-
       return emptyResponse
     }
 
@@ -30,7 +29,6 @@ async function getArticles() {
       isPound: badArticle.isPound,
       tags: badArticle.tags
     }))
-    console.log(payload)
 
     return payload
 
@@ -81,8 +79,6 @@ async function getFraction(fractionId) {
 
     const payload = await response.json()
 
-    console.log('api', payload)
-
     if (!response.ok) {
       if (response.status >= 500) window.alert("Error al conectarse al servidor")
 
@@ -111,7 +107,33 @@ async function getItem(itemId) {
 
     const payload = await response.json()
 
-    console.log('api', payload)
+    if (!response.ok) {
+      if (response.status >= 500) window.alert("Error al conectarse al servidor")
+
+
+      return emptyResponse
+    }
+
+    return payload
+
+  } catch (error) {
+
+    window.alert("Ocurrió un error :(")
+
+    return emptyResponse
+
+  }
+}
+
+async function getTable(tableId) {
+
+  const emptyResponse = { data: { table: {} } }
+
+  try {
+
+    const response = await window.fetch(`${API_URL}/tables/${tableId}`)
+
+    const payload = await response.json()
 
     if (!response.ok) {
       if (response.status >= 500) window.alert("Error al conectarse al servidor")
@@ -135,7 +157,8 @@ const api = {
   getArticles,
   getArticle,
   getFraction,
-  getItem
+  getItem,
+  getTable
 }
 
 export default api

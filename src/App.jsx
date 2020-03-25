@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 // import './App.css';
 import Home from './views/Home'
-import Search from './views/Search'
+import AllArticles from './views/AllArticles'
 import Article from './views/Article'
 
 
@@ -22,14 +22,9 @@ function App() {
           />
           <Route
             path='/articles'
-            component={Search}
+            component={AllArticles}
             exact
           />
-          {/* <Route
-            path='/post/:id'
-            component={PostDetail}
-            exact
-          /> */}
           <Route
             path='/articles/:articleId'
             component={Article}

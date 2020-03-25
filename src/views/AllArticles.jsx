@@ -12,8 +12,6 @@ function Search() {
     async function getArticles() {
       const payload = await api.getArticles()
 
-      console.log(payload)
-
       if (articles.length !== payload.data.allArticles.length) setArticles(payload.data.allArticles)
     }
 
