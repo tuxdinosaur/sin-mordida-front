@@ -1,4 +1,11 @@
 import React from 'react'
+
+import treeOrange from '../../assets/images/tree-orange.png'
+import car from '../../assets/images/car-red.png'
+import treeGreen from '../../assets/images/tree-green.png'
+import rules from '../../assets/images/rules-purple.png'
+import alert from '../../assets/images/alert-white.png'
+
 import styles from './index.module.css'
 
 function HomeComponent() {
@@ -21,10 +28,11 @@ function HomeComponent() {
                   <input className={styles.inputSearch} type="text" placeholder="Realiza una búsqueda" />
                 </form>
               </a>
-
-              <img src="./assets/img/tree-64px--orange.png" alt="" />
-              <img src="./assets/img/car-64px--red.png" alt="" />
-              <img src="./assets/img/tree-64px--green.png" alt="" />
+              <div className={styles.containerImages}>
+                <img src={treeOrange} alt="" />
+                <img src={car} alt="" />
+                <img src={treeGreen} alt="" />
+              </div>
             </div>
           </div>
 
@@ -34,32 +42,33 @@ function HomeComponent() {
 
       <div className={styles.container}>
 
-        <div>
-
-          <h3>
+          <h3 className={styles.consultaText}>
             Consulta rápida
           </h3>
 
           <div className={styles.optionsContainer}>
-
             <div className={styles.cardOption}>
-              <img src="./assets/img/rules-64px--purple.png" alt="" />
-              <p>
+              <img className={styles.rulesImage} src={rules} alt="" />
+              <p className={styles.cardText}>
                 Reglamento completo
               </p>
             </div>
-
           </div>
-        </div>
-
-        <div className={styles.alertContainer}>
-          <img src="./assets/img/alert-64px--white.png" alt="" />
-          <p>
-            Un oficial me detuvo
-      </p>
-        </div>
 
       </div>
+
+      <div className={styles.containerAlert}>
+        <div className={styles.containerAlertBtn}>
+          <img className={styles.alertImage} src={alert} alt="" />
+          <p className={styles.textAlert}>
+            Un oficial me detuvo
+          </p>
+        <svg className={styles.alertContainerSVG} width="260" height="260">
+          <path d="M0,0 a1,1 0 0,0 260,0" />
+        </svg>
+        </div>
+      </div>
+
     </div>
   )
 
