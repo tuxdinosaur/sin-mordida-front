@@ -7,11 +7,14 @@ function ArticleList(props) {
 
   return (
     <div className={styles.container}>
+      <div className="row">
       {
         props.list.map((article) => (
+          <div className={`col-12- col-lg-6 ${styles.containerArticleCard}`}>
           <Link
             key={`article ${article.articleId}`}
             to={`/articles/${article.articleId}`}
+              className={styles.containerArticleCard}
           >
             <ArticleCard
               articleId={article.articleId}
@@ -22,10 +25,12 @@ function ArticleList(props) {
               isPound={article.isPound}
               tags={article.tags}
             />
-          </Link>
+            </Link>
+            </div>
 
-        ))
-      }
+            ))
+            }
+            </div>
     </div>
   )
 }

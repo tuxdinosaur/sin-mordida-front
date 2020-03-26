@@ -106,23 +106,53 @@ p {
   background: white;
   min-height: 48px;
   min-width: 48px;
-  border-radius: 50%;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .penaltyImage {
   height: 35px;
 }
-
 .textPenalty {
-  padding-left: 10px;
-  /* font-weight: bold; */
+  padding-left: 8px;
+  font-size: 16px;
 }
 .textCorralon {
   font-weight: bold;
+  font-size: 18px;
 }
 .textMulta {
   font-weight: bold;
+  font-size: 18px;
 }
+
+@media (max-width: 360px) {
+  .container {
+  padding: 20px;
+  }
+  .circleCorralon {
+  background: white;
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penaltyImage {
+  height: 25px;
+  width: 25px;
+}
+.textPenalty {
+  padding-left: 5px;
+  font-size: 14px;
+}
+.textCorralon {
+  font-size: 16px;
+}
+.textMulta {
+  font-size: 15px;
+}
+}
+

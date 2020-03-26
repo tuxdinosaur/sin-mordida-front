@@ -51,7 +51,7 @@ function Table(props) {
   return (
     <div>
       <p>{previousText}</p>
-      <table>
+      <table class="table">
         <thead>
           <tr>
             <th>Tipo de vehículo</th>

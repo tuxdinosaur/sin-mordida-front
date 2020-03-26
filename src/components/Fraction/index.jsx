@@ -122,7 +122,7 @@ function Fraction(props) {
             <div
               className={`card-body ${styles.content}`}
             >
-              <p>{fractionText}</p>
+              <p className={styles.fractionText}>{fractionText}</p>
               <Items
                 items={items}
               />

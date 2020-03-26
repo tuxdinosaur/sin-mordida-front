@@ -25,12 +25,14 @@ body {
 }
 
 .collapsible {
-  background-color: #E9EBF7;
+  /* background-color: #E9EBF7; */
+  background-color: none;
   color: #425261!important;
   cursor: pointer;
-  padding: 18px;
+  padding: 12px;
   width: 100%;
-  border: none;
+  /* border: none; */
+  border: 1px solid #425261;
   border-radius: 10px;
   text-align: left;
   outline: none;
@@ -63,7 +65,11 @@ body {
   /* max-height: 0; */
   /* overflow: hidden; */
   /* transition: max-height 0.2s ease-out; */
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   /* margin-bottom: 10px; */
   border-radius: 10px 10px 10px 10px;
+}
+
+.fractionText {
+  margin: 0!important;
 }
