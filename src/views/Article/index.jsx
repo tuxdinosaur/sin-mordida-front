@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import Fractions from '../components/Fractions'
-import Table from '../components/Table'
+// ASSETS
+import styles from './index.module.css'
+import back from '../../assets/images/back.svg'
 
-import api from '../lib/api'
+import Fractions from '../../components/Fractions'
+import Table from '../../components/Table'
+
+import api from '../../lib/api'
 
 function Article(props) {
   const [abstract, setAbstract] = useState('')
@@ -36,8 +40,13 @@ function Article(props) {
   ])
 
   return (
-    <div>
-      <h5>
+    <div className={styles.container}>
+      <div className={styles.containerBack}>
+        <img className={styles.iconBack} src={back} alt="expand" />
+        <p className={styles.textBack}>
+        </p>
+      </div>
+      <h5 className={styles.titleArticle}>
         Artículo {articleId}
       </h5>
       <p>{abstract}</p>

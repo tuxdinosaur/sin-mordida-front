@@ -55,6 +55,8 @@ import $ from 'jquery';
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+import expand from '../../assets/images/expand-arrow-48.png'
+
 import Items from '../Items'
 
 import api from '../../lib/api'
@@ -87,40 +89,43 @@ function Fraction(props) {
 
     <div className={styles.container}>
 
-      <div class="accordion" id="accordionFraction">
+      <div className="accordion" id="accordionFraction">
 
-        <div class="card">
+        <div className={`${styles.card}`}>
 
           <div
-            class="card-header"
+            className="card-headers"
             id="headingThree"
           >
             <h2
-              class="mb-0"
+              className="mb-0"
             >
               <button
-                class="btn btn-link collapsed"
-                type="button"
+                className={`btn btn-link collapsed ${styles.collapsible}`}
                 data-toggle="collapse"
                 data-target={`#${fractionNumber}`}
                 aria-expanded="false"
                 aria-controls="collapseThree"
               >
-                {fractionNumber}
+                Fracción {fractionNumber}
+                <img className={styles.iconCollapse} src={expand} alt="expand"/>
               </button>
             </h2>
           </div>
 
           <div
             id={fractionNumber}
-            class="collapse"
+            className="collapse"
             aria-labelledby="headingThree"
             data-parent="#accordionFraction"
           >
             <div
-              class="card-body"
+              className={`card-body ${styles.content}`}
             >
-              {fractionText}
+              <p>{fractionText}</p>
+              <Items
+                items={items}
+              />
             </div>
           </div>
 

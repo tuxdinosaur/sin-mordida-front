@@ -94,28 +94,35 @@ p {
 
 .containerPenalizaciones {
   display: flex;
+  justify-content: space-around;
 }
 
 .corralon {
   display: flex;
   align-items: center;
-  padding: 20px 20px 0 0;
 }
 
 .circleCorralon {
-  background: red;
-  height: 25px;
-  width: 25px;
+  background: white;
+  min-height: 48px;
+  min-width: 48px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.circleUmas {
-  background: green;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+.penaltyImage {
+  height: 35px;
 }
 
-.textCorralon {
+.textPenalty {
   padding-left: 10px;
+  /* font-weight: bold; */
+}
+.textCorralon {
+  font-weight: bold;
+}
+.textMulta {
+  font-weight: bold;
 }

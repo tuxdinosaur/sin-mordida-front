@@ -6,15 +6,27 @@ body {
   color: #425261;
 }
 
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: none;
+    background-clip: border-box;
+    border: none;
+    border-radius: 0;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px 0;
 }
 
 .collapsible {
-  background-color: #425261;
-  color: white;
+  background-color: #E9EBF7;
+  color: #425261!important;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -23,6 +35,12 @@ body {
   text-align: left;
   outline: none;
   font-size: 15px;
+  text-decoration: none!important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
 
 .active {
@@ -31,19 +49,13 @@ body {
 
 .active,
 .collapsible:hover {
-  background-color: #39424b;
+  background-color: rgb(216, 219, 236);
 }
 
-.collapsible:after {
-  content: "\002B";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
+.iconCollapse {
+  width: 32px;
+  height: 32px;
+  margin-left: 15px;
 }
 
 .content {
@@ -53,5 +65,5 @@ body {
   /* transition: max-height 0.2s ease-out; */
   background-color: #f1f1f1;
   /* margin-bottom: 10px; */
-  border-radius: 0 0 10px 10px;
+  border-radius: 10px 10px 10px 10px;
 }

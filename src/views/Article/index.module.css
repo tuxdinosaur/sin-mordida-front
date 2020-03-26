@@ -1,0 +1,26 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.containerBack {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.iconBack {
+  /* transform: rotate(90deg); */
+  width: 45px;
+  height: 45px;
+}
+
+.textBack {
+  margin: 0;
+}
+
+.titleArticle {
+  font-weight: bold;
+  font-size: 32px;
+}

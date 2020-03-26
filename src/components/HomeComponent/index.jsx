@@ -23,11 +23,11 @@ function HomeComponent() {
                 Buen día, <br /> ¿Qué necesitas?
             </h2>
 
-              <a href="./articles">
+              <div>
                 <form className={styles.formSearch}>
                   <input className={styles.inputSearch} type="text" placeholder="Realiza una búsqueda" />
                 </form>
-              </a>
+              </div>
               <div className={styles.containerImages}>
                 <img src={treeOrange} alt="" />
                 <img src={car} alt="" />
@@ -47,12 +47,12 @@ function HomeComponent() {
           </h3>
 
           <div className={styles.optionsContainer}>
-            <div className={styles.cardOption}>
+            <a href="./articles" className={styles.cardOption}>
               <img className={styles.rulesImage} src={rules} alt="" />
               <p className={styles.cardText}>
                 Reglamento completo
               </p>
-            </div>
+            </a>
           </div>
 
       </div>
