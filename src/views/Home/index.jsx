@@ -12,6 +12,7 @@ import styles from './index.module.css'
 class Home extends Component {
   constructor(props) {
     super(props)
+    this.doSearch = this.doSearch.bind(this)
     this.state = {
       articles: []
     }
@@ -41,7 +42,10 @@ class Home extends Component {
           isPound: badArticle.isPound,
           tags: badArticle.tags
         }))
-        console.log(payload.data.allArticles)
+        this.setState({
+          articles: payload.data.allArticles
+        })
+        console.log(this.state.articles)
       }
     }
   }
