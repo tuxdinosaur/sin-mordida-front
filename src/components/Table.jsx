@@ -51,20 +51,22 @@ function Table(props) {
   return (
     <div>
       <p>{previousText}</p>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Tipo de vehículo</th>
-            <th>Fracción</th>
-            <th>Multa en UMAs</th>
-            <th>Sanción en licencia</th>
-            <th>Sanción en matrícula</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableRow}
-        </tbody>
-      </table>
+      <div className="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Tipo de vehículo</th>
+              <th>Fracción</th>
+              <th>Multa en UMAs</th>
+              <th>Sanción en licencia</th>
+              <th>Sanción en matrícula</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableRow}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 

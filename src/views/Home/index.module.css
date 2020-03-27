@@ -26,6 +26,30 @@ h1, h2, h3 {
   margin-top: 35px;
 }
 
+.searchContent {
+  display: flex;
+  align-items: center;
+}
+
+.erase {
+  border: 1px solid #425261;
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #FFF;
+  background: #425261;
+}
+
+.erase:hover {
+  color: #FFF;
+  background: #425261;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
 /* SEARCH BAR */
 .title__searchContainer {
   font-size: 32px;
@@ -33,9 +57,10 @@ h1, h2, h3 {
   font-weight: bold;
 }
 .formSearch {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   padding: 20px 0;
   display: flex;
+  flex-grow: 1;
 }
 .inputSearch {
   width: 98%;

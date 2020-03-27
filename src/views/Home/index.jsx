@@ -65,7 +65,7 @@ class Home extends Component {
                   Buen día, <br /> ¿Qué necesitas?
             </h2>
 
-                <div>
+                <div className={styles.searchContent}>
                   <form
                     onSubmit={e => { e.preventDefault(); }}
                     className={styles.formSearch}>
@@ -77,6 +77,9 @@ class Home extends Component {
                       onChange={this.doSearch}
                     />
                   </form>
+                  <a href="/" className={styles.erase}>
+                    X
+                  </a>
                 </div>
 
                 <div className={styles.containerImages}>
