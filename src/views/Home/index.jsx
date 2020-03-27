@@ -24,6 +24,28 @@ class Home extends Component {
     })
   }
 
+  async doSearch({ target }) {
+    const text = target.value
+    const payload = await api.getSearch(text)
+    if (text !== '') {
+      if (payload.data.article.length !== 0) {
+        payload.data.allArticles = payload.data.article.map((badArticle) => ({
+          id: badArticle._id,
+          articleId: badArticle.articleId,
+          abstract: badArticle.abstract,
+          fractions: badArticle.fractions,
+          penalties: badArticle.table,
+          umas: badArticle.umas,
+          licensePoints: badArticle.licensePoints,
+          platePoints: badArticle.platePoints,
+          isPound: badArticle.isPound,
+          tags: badArticle.tags
+        }))
+        console.log(payload.data.allArticles)
+      }
+    }
+  }
+
   render() {
     return (
       <div>
@@ -42,8 +64,10 @@ class Home extends Component {
                 <div>
                   <form className={styles.formSearch}>
                     <input className={styles.inputSearch}
+                      name='searchBox'
                       type="text"
                       placeholder="Realiza una búsqueda"
+                      onChange={this.doSearch}
                     />
                   </form>
                 </div>

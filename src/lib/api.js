@@ -41,6 +41,33 @@ async function getArticles() {
   }
 }
 
+async function getSearch(text) {
+
+  const emptyResponse = { data: { articles: [] } }
+
+  try {
+
+    const response = await window.fetch(`${API_URL}/articles?text=${text}`)
+
+    const payload = await response.json()
+
+    if (!response.ok) {
+      if (response.status >= 500) window.alert("Error al conectarse al servidor")
+
+      return emptyResponse
+    }
+
+    return payload
+
+  } catch (error) {
+
+    window.alert("Ocurrió un error :(")
+
+    return emptyResponse
+
+  }
+}
+
 async function getArticle(articleId) {
 
   const emptyResponse = { data: { articles: {} } }
@@ -158,7 +185,8 @@ const api = {
   getArticle,
   getFraction,
   getItem,
-  getTable
+  getTable,
+  getSearch
 }
 
 export default api
