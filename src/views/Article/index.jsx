@@ -41,11 +41,9 @@ function Article(props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.containerBack}>
+      <a href="/" className={styles.containerBack}>
         <img className={styles.iconBack} src={back} alt="expand" />
-        <p className={styles.textBack}>
-        </p>
-      </div>
+      </a>
       <h5 className={styles.titleArticle}>
         Artículo {articleId}
       </h5>

@@ -66,8 +66,11 @@ class Home extends Component {
             </h2>
 
                 <div>
-                  <form className={styles.formSearch}>
-                    <input className={styles.inputSearch}
+                  <form
+                    onSubmit={e => { e.preventDefault(); }}
+                    className={styles.formSearch}>
+                    <input
+                      className={styles.inputSearch}
                       name='searchBox'
                       type="text"
                       placeholder="Realiza una búsqueda"
