@@ -6,9 +6,11 @@ import treeGreen from '../../assets/images/tree-green.png'
 import rules from '../../assets/images/rules-purple.png'
 import alert from '../../assets/images/alert-white.png'
 
+import SearchBox from '../SearchBox'
+
 import styles from './index.module.css'
 
-function HomeComponent() {
+function HomeComponent(props) {
   return (
     <div>
       <div className={styles.containerBlue}>
@@ -23,11 +25,8 @@ function HomeComponent() {
                 Buen día, <br /> ¿Qué necesitas?
             </h2>
 
-              <div>
-                <form className={styles.formSearch}>
-                  <input className={styles.inputSearch} type="text" placeholder="Realiza una búsqueda" />
-                </form>
-              </div>
+              <SearchBox />
+
               <div className={styles.containerImages}>
                 <img src={treeOrange} alt="" />
                 <img src={car} alt="" />
@@ -42,18 +41,18 @@ function HomeComponent() {
 
       <div className={styles.container}>
 
-          <h3 className={styles.consultaText}>
-            Consulta rápida
+        <h3 className={styles.consultaText}>
+          Consulta rápida
           </h3>
 
-          <div className={styles.optionsContainer}>
-            <a href="./articles" className={styles.cardOption}>
-              <img className={styles.rulesImage} src={rules} alt="" />
-              <p className={styles.cardText}>
-                Reglamento completo
+        <div className={styles.optionsContainer}>
+          <a href="./articles" className={styles.cardOption}>
+            <img className={styles.rulesImage} src={rules} alt="" />
+            <p className={styles.cardText}>
+              Reglamento completo
               </p>
-            </a>
-          </div>
+          </a>
+        </div>
 
       </div>
 
@@ -63,9 +62,9 @@ function HomeComponent() {
           <p className={styles.textAlert}>
             Un oficial me detuvo
           </p>
-        <svg className={styles.alertContainerSVG} width="260" height="260">
-          <path d="M0,0 a1,1 0 0,0 260,0" />
-        </svg>
+          <svg className={styles.alertContainerSVG} width="260" height="260">
+            <path d="M0,0 a1,1 0 0,0 260,0" />
+          </svg>
         </div>
       </div>
 

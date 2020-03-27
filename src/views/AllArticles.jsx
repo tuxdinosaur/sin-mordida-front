@@ -4,7 +4,9 @@ import api from '../lib/api'
 
 import ArticleList from '../components/ArticleList'
 
-function Search() {
+import SearchBox from '../components/SearchBox'
+
+function AllArticles() {
 
   const [articles, setArticles] = useState([])
 
@@ -19,11 +21,15 @@ function Search() {
   }, [articles])
 
   return (
-    <ArticleList
-      list={articles}
-    />
+    <div>
+      <SearchBox />
+
+      <ArticleList
+        list={articles}
+      />
+    </div>
   )
 
 }
 
-export default Search
+export default AllArticles
