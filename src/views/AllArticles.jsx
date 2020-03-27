@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from 'react'
-
-import api from '../lib/api'
+import React from 'react'
 
 import ArticleList from '../components/ArticleList'
 
-import SearchBox from '../components/SearchBox'
+function AllArticles(props) {
 
-function AllArticles() {
-
-  const [articles, setArticles] = useState([])
-
-  useEffect(() => {
-    async function getArticles() {
-      const payload = await api.getArticles()
-
-      if (articles.length !== payload.data.allArticles.length) setArticles(payload.data.allArticles)
-    }
-
-    getArticles()
-  }, [articles])
+  const articles = props.articles
 
   return (
     <div>
-      <SearchBox />
-
       <ArticleList
         list={articles}
       />
